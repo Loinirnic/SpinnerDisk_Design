@@ -1,1 +1,2 @@
-# SpinnerDisk_Design
+# Spinning Disk Experiment Design details
+
