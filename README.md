@@ -27,9 +27,9 @@ An ideal response can be shown from Quanser's motor, where its gain graph as sho
 | Nominal speed | 3050 RPM |
 | Nominal torque | 22 mNm |
 
-One of the key points to keep in mind is the speed to torque ratio, if the torque is too low then the motor will take a long time to reach its maximum speed and its movements won't be as precise. A motor with a very high torque will usually be implemented with large weights that we won't be dealing with.
+One of the key points to keep in mind is the speed to torque ratio, if the torque is too low then the motor will take a long time to reach its maximum speed and its movements won't be as precise. A motor with a very high torque will usually be implemented with large weights that we won't be dealing with. 
 
-## Our Motor choice
+## My Final motor choice
 
 The motor we have chosen is the Maxon Coreless Motor; It has very similar characterisitcs to quanser's motor apart from a higher velocity of. Below we can see the gain graph after testing the motor without a weight compared to the quanser's response. 
 
@@ -37,4 +37,10 @@ The motor we have chosen is the Maxon Coreless Motor; It has very similar charac
 
 ## Encoder PCB Design
 
+The Encoder must be connected to the main board to transfer the data it collects, therefore we will need a small pcb to attach the encoder to. 
+
+Requirements for the Encoder Board:
+- Five input connecting terminals for the encoders pins
+- Three pull up resistors for the signals - as required from the [datasheet](http://www.farnell.com/datasheets/20523.pdf)
+- Five Output connecting terminals for the wires to go to the main PCB 
 
