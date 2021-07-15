@@ -35,6 +35,6 @@ The motor we have chosen is the Maxon Coreless Motor; It has very similar charac
 
 <img width="527" alt="maxonVquanser" src="https://user-images.githubusercontent.com/87417442/125797198-7a27112d-0e25-4391-be40-0b0f557556fd.PNG">
 
-## **Encoder Design**
+## Encoder PCB Design
 
 
