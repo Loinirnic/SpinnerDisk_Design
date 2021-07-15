@@ -15,4 +15,5 @@ Our motor requirements:
 - Good repeatability for long life time
 
 An example of an ideal response can be from Quanser's motor. The output Gain graph show below.
-https://github.com/Loinirnic/SpinnerDisk_Design/blob/main/Images/QuanserGain_graph.PNG
+<img width="527" alt="QuanserGain_graph" src="https://user-images.githubusercontent.com/87417442/125777520-b5089581-b4e3-4b79-ad56-eedee1e55f10.PNG">
+
