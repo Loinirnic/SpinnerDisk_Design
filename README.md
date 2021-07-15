@@ -31,11 +31,10 @@ One of the key points to keep in mind is the speed to torque ratio, if the torqu
 
 # Our Motor choice
 
-The motor we have chosen is the Maxon Coreless Motor; It has very similar characterisitcs to quanser's motor apart from a higher velocity of. Below we can see the gain graph after testing the motor without a weight
+The motor we have chosen is the Maxon Coreless Motor; It has very similar characterisitcs to quanser's motor apart from a higher velocity of. Below we can see the gain graph after testing the motor without a weight compared to the quanser's response. 
 
-<img width="527" alt="Maxon Motor" src="https://user-images.githubusercontent.com/87417442/125796779-5a55ba76-0e83-45c8-868e-b7ac16941451.PNG">
 <img width="527" alt="maxonVquanser" src="https://user-images.githubusercontent.com/87417442/125797198-7a27112d-0e25-4391-be40-0b0f557556fd.PNG">
 
-
+# ""Encoder Design""
 
 
