@@ -14,6 +14,12 @@ Our motor requirements:
 - A quick linear gain response after the deadband
 - Good repeatability for long life time
 
-An example of an ideal response can be from Quanser's motor. The output Gain graph show below.
+An example of an ideal response can be from Quanser's motor. The output Gain graph show below:
+
 <img width="527" alt="QuanserGain_graph" src="https://user-images.githubusercontent.com/87417442/125777520-b5089581-b4e3-4b79-ad56-eedee1e55f10.PNG">
 
+# Characteristics to look for when ordering a motor:
+|Characteristics| Quanser motor values for reference|
+|---------------|-----------------------------------|
+quick response from motor when a small voltage is applied. E.g 
+- Good Velocity to torque ratio
