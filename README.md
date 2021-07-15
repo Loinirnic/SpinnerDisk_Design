@@ -23,7 +23,8 @@ An example of an ideal response can be from Quanser's motor. The output Gain gra
 |Motor Parameters| Quanser motor values for reference|
 |----------------|-----------------------------------|
 |Voltage | 12V-24V (Quanser motor is 18V)|
-|Low Inertia for quick response when Voltage is applied | 4.0 × 10−6 kg-m^2 |
+|Low Inertia | 4.0 × 10−6 kg-m^2 |
 |Nominal speed| 3050 RPM |
 |Nominal torque | 22 mNm |
 
+One of the key points to keep in mind is the speed to torque ratio, if the torque is too low then the motor's will reach its maximum speed slowly and its movements won't be as precise.
