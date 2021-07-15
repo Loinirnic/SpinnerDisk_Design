@@ -33,6 +33,7 @@ One of the key points to keep in mind is the speed to torque ratio, if the torqu
 
 The motor we have chosen is the Maxon Coreless Motor; It has very similar characterisitcs to quanser's motor apart from the higher velocity. Below we can see the gain graph after testing the motor without a weight
 
-<img width="264" alt="Maxon Motor" src="https://user-images.githubusercontent.com/87417442/125796335-7779b926-cefc-4fd7-8f1e-9b371be17db3.PNG">
+<img width="426" alt="Maxon Motor" src="https://user-images.githubusercontent.com/87417442/125796484-3cf96df0-2f89-4f22-9056-e59b655a6ec3.PNG">
+
 
 
