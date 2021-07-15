@@ -27,4 +27,4 @@ An example of an ideal response can be from Quanser's motor. The output Gain gra
 |Nominal speed| 3050 RPM |
 |Nominal torque | 22 mNm |
 
-One of the key points to keep in mind is the speed to torque ratio, if the torque is too low then the motor's will reach its maximum speed slowly and its movements won't be as precise.
+One of the key points to keep in mind is the speed to torque ratio, if the torque is too low then the motor will take a long time to reach its maximum speed and its movements won't be as precise.
