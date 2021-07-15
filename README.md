@@ -44,6 +44,12 @@ Requirements for the Encoder Board:
 - Three **2k7ohm** pull up resistors for the signals - as required from the [datasheet](http://www.farnell.com/datasheets/20523.pdf)
 - Five Output connecting terminals for the wires to go to the main PCB 
 
+The open source software used to design these boards is [KiCAD](https://www.kicad.org/)
+
 ### Encoder Final Circuit Schematic drawing
 <img width="416" alt="Encoder final schematic" src="https://user-images.githubusercontent.com/87417442/125802305-4f761adf-d002-4eea-b290-1487a04a4102.PNG">
 
+### My Encoder PCB Design 
+<img width="416" alt="Encoder dimension" src="https://user-images.githubusercontent.com/87417442/125812643-c6282e4e-b15b-4746-a37f-4d1f3aa421b1.PNG">
+
+Above you can see the dimensions of the board. It is very small so that it can be neatly attached to the encoder board without getting in the way of the experiment. I have chosen SMD Resistors as they don't take up as much room as Through-hole ones and enable double sided board design without getting in the way.
