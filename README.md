@@ -19,7 +19,8 @@ An example of an ideal response can be from Quanser's motor. The output Gain gra
 <img width="527" alt="QuanserGain_graph" src="https://user-images.githubusercontent.com/87417442/125777520-b5089581-b4e3-4b79-ad56-eedee1e55f10.PNG">
 
 # Characteristics to look for when ordering a motor:
-|Characteristics| Quanser motor values for reference|
-|---------------|-----------------------------------|
-quick response from motor when a small voltage is applied. E.g 
-- Good Velocity to torque ratio
+
+|Motor Parameters| Quanser motor values for reference|
+|----------------|-----------------------------------|
+Low Inertia for quick response when coltage is applied | 4.0 × 10−6 kg-m2 |
+Good Velocity to torque ratio
