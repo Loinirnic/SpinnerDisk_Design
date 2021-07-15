@@ -14,7 +14,7 @@ Our motor requirements:
 - A quick linear gain response after the deadband
 - Good repeatability for long life time
 
-An example of an ideal response can be from Quanser's motor. The output Gain graph show below:
+An ideal response can be shown from Quanser's motor, where its gain graph as shown below demonstrates what we are looking for:
 
 <img width="527" alt="QuanserGain_graph" src="https://user-images.githubusercontent.com/87417442/125777520-b5089581-b4e3-4b79-ad56-eedee1e55f10.PNG">
 
@@ -22,9 +22,17 @@ An example of an ideal response can be from Quanser's motor. The output Gain gra
 
 |Motor Parameters| Quanser motor values for reference|
 |----------------|-----------------------------------|
-|Voltage | 12V-24V (Quanser motor is 18V)|
-|Low Inertia | 4.0 × 10−6 kg-m^2 |
-|Nominal speed| 3050 RPM |
-|Nominal torque | 22 mNm |
+| Voltage 12V-24V | 18V |
+| Low Inertia | 4.0 × 10−6 kg-m^2 |
+| Nominal speed | 3050 RPM |
+| Nominal torque | 22 mNm |
 
-One of the key points to keep in mind is the speed to torque ratio, if the torque is too low then the motor will take a long time to reach its maximum speed and its movements won't be as precise.
+One of the key points to keep in mind is the speed to torque ratio, if the torque is too low then the motor will take a long time to reach its maximum speed and its movements won't be as precise. A motor with a very high torque will usually be implemented with large weights that we won't be dealing with.
+
+# Our Motor choice
+
+The motor we have chosen is the Maxon Coreless Motor; It has very similar characterisitcs to quanser's motor apart from the higher velocity. Below we can see the gain graph after testing the motor without a weight
+
+<img width="264" alt="Maxon Motor" src="https://user-images.githubusercontent.com/87417442/125796335-7779b926-cefc-4fd7-8f1e-9b371be17db3.PNG">
+
+
