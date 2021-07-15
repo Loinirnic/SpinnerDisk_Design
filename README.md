@@ -35,12 +35,15 @@ The motor we have chosen is the Maxon Coreless Motor; It has very similar charac
 
 <img width="527" alt="maxonVquanser" src="https://user-images.githubusercontent.com/87417442/125797198-7a27112d-0e25-4391-be40-0b0f557556fd.PNG">
 
-## Encoder PCB Design
+# Encoder PCB Design
 
-The Encoder must be connected to the main board to transfer the data it collects, therefore we will need a small pcb to attach the encoder to. 
+The Encoder must be connected to the main board to transfer the data it collects, therefore we will need a small pcb for this.
 
 Requirements for the Encoder Board:
 - Five input connecting terminals for the encoders pins
-- Three pull up resistors for the signals - as required from the [datasheet](http://www.farnell.com/datasheets/20523.pdf)
+- Three **2k7ohm** pull up resistors for the signals - as required from the [datasheet](http://www.farnell.com/datasheets/20523.pdf)
 - Five Output connecting terminals for the wires to go to the main PCB 
+
+### Encoder Final Circuit Schematic drawing
+<img width="416" alt="Encoder final schematic" src="https://user-images.githubusercontent.com/87417442/125802305-4f761adf-d002-4eea-b290-1487a04a4102.PNG">
 
