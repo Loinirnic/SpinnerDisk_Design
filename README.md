@@ -53,3 +53,17 @@ The open source software used to design these boards is [KiCAD](https://www.kica
 <img width="416" alt="Encoder dimension" src="https://user-images.githubusercontent.com/87417442/125812643-c6282e4e-b15b-4746-a37f-4d1f3aa421b1.PNG">
 
 Above you can see the dimensions of the board. It is very small so that it can be neatly attached to the encoder board without getting in the way of the experiment. I have chosen SMD Resistors as they don't take up as much room as Through-hole ones and enable double sided board design without getting in the way.
+
+# Main PID PCB Design
+
+The Main PCB Board will consist of these components
+- Arduino Nano - V3
+- DC power supply Barrel Jack 
+- Alternative Screw terminal for power supply
+- Two 6 pin Screw Terminals - one forthe motor driver and once for encoder board
+- Two 3.3V-5V Bi-directional level converters
+- 2A Fuse for the motor
+- 100uF decoupling capacitor
+
+The two level converters are used to change the voltage from 3.3Vto 5V
+- 
