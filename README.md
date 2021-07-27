@@ -54,6 +54,11 @@ The open source software used to design these boards is [KiCAD](https://www.kica
 
 Above you can see the dimensions of the board. It is very small so that it can be neatly attached to the encoder board without getting in the way of the experiment. I have chosen SMD Resistors as they don't take up as much room as Through-hole ones and enable double sided board design without getting in the way.
 
+#Footprints used in design:
+- Resistors -> **Resistor_SMD:R_1206_3216Metric**
+- Encoder board terminal -> **Connector_PinHeader_2.00mm:PinHeader_1x05_P2.00mm_Vertical**
+- Output terminal -> **Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical**
+
 # Main PID PCB Design
 
 The Main PCB Board will consist of these components
@@ -62,8 +67,8 @@ The Main PCB Board will consist of these components
 - Alternative Screw terminal for power supply
 - Two 6 pin Screw Terminals - one forthe motor driver and once for encoder board
 - Two 3.3V-5V Bi-directional level converters
-- 2A Fuse for the motor
-- 100uF decoupling capacitor
+- 2A surface mount Fuse for the motor
+- 100uF Through hole decoupling capacitor
 
 The two level converters are used to change the voltage from 3.3Vto 5V
-- 
+I have specially designed the f
