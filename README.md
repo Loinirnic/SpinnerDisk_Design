@@ -89,7 +89,8 @@ You can see below the layout of my footprint:
 Where Pin 4 represents the GND pin on the Low Voltage side of the board.
 The Boards will be placed with the components facing the PCB since the tracks are much easier to layout on the pcb.
 Below is an image showing pins that are soldered to the chip on the correct side. These are male pins, female pins are then added to the main pcb where the converters can be attached. This design allows them to be easily removed if needed.
-![IMG_20210729_102810](https://user-images.githubusercontent.com/442/127521717-1f7ce065-070d-49bb-9166-079141cfd93a.jpg)
+<img width="200" alt="converter"src="https://user-images.githubusercontent.com/87417442/127521928-9c6944f6-88ba-452c-93ee-8cd0f61a4303.jpg">
+
 
 
 ### 
