@@ -69,10 +69,12 @@ The Main PCB Board will consist of these components
 - Two 6 pin Screw Terminals - used to connect motor driver and encoder board
 - Two 3.3V-5V Bi-directional level converters
 - 2A surface mount Fuse for the arduino
-- 100uF Through hole decoupling capacitor
+- 100uF Through hole decoupling capacitor (Preferrably ceramic)
 
 The two level converters are used to change the voltage from 3.3Vto 5V
 I have specially designed the footprint for these as they consist of two **2.54mm** 6 pin terminals adjacently positioned with a separation of around **9.97mm**.
 You can see below the layout of the footprint:
 <img width="200" alt="footprint" src="https://user-images.githubusercontent.com/87417442/127123439-84998efd-94e4-4624-8b12-5f986bf3b9b3.PNG">
 
+Where Pin 4 represents the GND pin on the Low Voltage side of the board.
+The Boards will be placed with the components facing the PCB since the tracks are much easier to layout when that is done.
