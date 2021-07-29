@@ -51,31 +51,33 @@ The open source software used to design these boards is [KiCAD](https://www.kica
 ### Encoder Final Circuit Schematic drawing
 <img width="416" alt="Encoder final schematic" src="https://user-images.githubusercontent.com/87417442/125802305-4f761adf-d002-4eea-b290-1487a04a4102.PNG">
 
-The footprints for this encoder are as follows: 
-- 
-### My Encoder PCB Design 
-<img width="416" alt="Encoder dimension" src="https://user-images.githubusercontent.com/87417442/125812643-c6282e4e-b15b-4746-a37f-4d1f3aa421b1.PNG">
-
-Above you can see the dimensions of the board. It is very small so that it can be neatly attached to the encoder board without getting in the way of the experiment. I have chosen SMD Resistors as they don't take up as much room as Through-hole ones and enable double sided board design without getting in the way.
-
 ### Footprints used in design:
 - Resistors R1, R2, R3 -> **Resistor_SMD:R_1206_3216Metric**
 - Encoder board terminal J1 -> **Connector_PinHeader_2.00mm:PinHeader_1x05_P2.00mm_Vertical**
 - Output terminal J2 -> **Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical**
 
+### My Encoder PCB final Design 
+<img width="416" alt="Encoder dimension" src="https://user-images.githubusercontent.com/87417442/125812643-c6282e4e-b15b-4746-a37f-4d1f3aa421b1.PNG">
+
+Above you can see the dimensions of the board. It is very small so that it can be neatly attached directly to the encoder board using terminal J1 without getting in the way of the experiment itself. I have chosen SMD Resistors as they don't take up as much room as Through-hole ones and can be easily applied using pasting or careful soldering.
+
 # Main PID PCB Design
 
-The Main PCB Board will consist of these components
+The Main PCB Board will use an arduino nano to communicate to the motor, encoder and raspberry pi. The arduino will take the information from the raspberry pi and control the motor using a driver. It will then receive the feedback from the encoder readings and raturn those to the raspberry pi.
+
+Overall the components we need to acheieve this functioning circuit are:
 
 - Arduino Nano - V3
 - DC power supply Barrel Jack 
 - Alternative Screw terminal for power supply
-- Two 6 pin Screw Terminals - used to connect motor driver and encoder board
-- Two 3.3V-5V Bi-directional level converters
-- 2A surface mount Fuse for the arduino
+- 5 Pin input terminal from encoder
+- 6 pin output terminal for motor driver
+- Two 3.3V-5V Bi-directional level converters from arduino
+- 2A Fuse for the arduino
 - 100uF Through hole decoupling capacitor (Preferrably ceramic)
 
-The two level converters are used to change the voltage from 3.3Vto 5V
+The two level converters are used to change the voltage from 3.3Vto 5V or vise versa. The consist of power terminals on each end for low or high voltages as well as 4 channels on each end for signals. 
+
 I have specially designed the footprint for these as they consist of two **2.54mm** 6 pin terminals adjacently positioned with a separation of around **9.97mm**.
 You can see below the layout of the footprint:
 <img width="200" alt="footprint" src="https://user-images.githubusercontent.com/87417442/127123439-84998efd-94e4-4624-8b12-5f986bf3b9b3.PNG">
