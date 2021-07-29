@@ -78,19 +78,23 @@ Overall the components we need to acheieve this functioning circuit are:
 
 # Outline of components used and how they are connected
 
+### Arduino Nano
+
+To attach the arduino nano to the pcb we will need two 15 pin terminals. The Female pin terminal will be soldered onto the pcb whereas the male pins will be soldered onto the arduino where it can be attached or removed easily. **Make sure when designing pcb to position the footprint in an area where the usb port has clear access**.
+
+### Terminals and Barrel Jack
+When designing I must make sure to keep the inputs of the terminals clear
+
 ### Level converters:
 
 The two level converters are used to change the voltage from 3.3V to 5V or vise versa. These consist of power terminals and 4 channels for both the low and high voltage ends. Click [here](https://www.digchip.com/datasheets/download_datasheet.php?id=436483&part-number=BOB-12009&type=prod) to see the datasheet.
+One will be used for the encoder input and one for the motor driver output. 
 
 I have specially designed the footprint for the pins on these boards to be directly connected to the pcb as the chips consist of two **2.54mm** 6 pin terminals adjacently positioned with a separation of around **9.97mm**.
 You can see below the layout of my footprint:
-<img width="200" alt="footprint" src="https://user-images.githubusercontent.com/87417442/127123439-84998efd-94e4-4624-8b12-5f986bf3b9b3.PNG">
+<img width="156" alt="footprint" src="https://user-images.githubusercontent.com/87417442/127123439-84998efd-94e4-4624-8b12-5f986bf3b9b3.PNG">
 
 Where Pin 4 represents the GND pin on the Low Voltage side of the board.
-The Boards will be placed with the components facing the PCB since the tracks are much easier to layout on the pcb.
-Below is an image showing pins that are soldered to the chip on the correct side. These are male pins, female pins are then added to the main pcb where the converters can be attached. This design allows them to be easily removed if needed.
-<img width="200" alt="converter"src="https://user-images.githubusercontent.com/87417442/127521928-9c6944f6-88ba-452c-93ee-8cd0f61a4303.jpg">
-
-
+The Boards will be placed with the components facing the PCB since the tracks are much easier to layout on the pcb. The pins soldered onto the chips are male, female pins are then soldered to the main pcb so that the chips can be easily attached or removed.
 
 ### 
