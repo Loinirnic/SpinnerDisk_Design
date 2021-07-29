@@ -32,13 +32,16 @@ One of the key points to keep in mind is the speed to torque ratio, if the torqu
 ## Capacitors and where to place them:
 The motor needs a decoupling capacitor of **100nF** to be soldered between the power terminals of its base. This decoupling capacitor reduces the noise and is the general value to be used for any motor. The will also be two **47nF** capacitors soldered from each terminal to the shell of the motor itself, acting to specifiy the frequency  range. Soldering the capacitors to the shell is the same as grounding.
 
-When choosing a motor we must first test its velocity/ voltage responses. This consists of using a tachometer (measures velocity in RPM) and a power supply box running from 0-10V with 0.5V increments. Once the results have been obtained we must calculate the gain in rad/s and compare the results to how we wish them to appear in the graph above - Quanser's results.
+## Testing the motor
+When choosing a motor we must first test its velocity/ voltage responses. This consists of using a tachometer (measures velocity in RPM) and a power supply box running from 0-10V with 0.5V increments. Once the results have been obtained we must calculate the gain in rad/s and compare the results to how we wish them to appear in the graph above - Quanser's results. 
 
 # Encoder PCB Design
 
-The Encoder must be connected to the main board to transfer the data it collects, therefore we will need a small pcb for this.
+The Optical encoder we are using is - AEDB-9140 Series.
 
-Requirements for the Encoder Board:
+The Encoder must be connected to the main board to transfer the data it collects through incremental channels, we might assume that this can be acheived attaching wires directly from the encoder pins to the main pcb however, as per the datasheet we must include pull up resistors for the different channels which have to be positioned as close to the encoder as possible. To achieve this a separate encpder bpard must be dsigned with the Resistors on it.
+
+## Requirements for the Encoder Board:
 - Five input connecting terminals for the encoders pins
 - Three **2k7ohm** pull up resistors for the signals - as required from the [datasheet](http://www.farnell.com/datasheets/20523.pdf)
 - Five Output connecting terminals for the wires to go to the main PCB 
@@ -48,6 +51,8 @@ The open source software used to design these boards is [KiCAD](https://www.kica
 ### Encoder Final Circuit Schematic drawing
 <img width="416" alt="Encoder final schematic" src="https://user-images.githubusercontent.com/87417442/125802305-4f761adf-d002-4eea-b290-1487a04a4102.PNG">
 
+The footprints for this encoder are as follows: 
+- 
 ### My Encoder PCB Design 
 <img width="416" alt="Encoder dimension" src="https://user-images.githubusercontent.com/87417442/125812643-c6282e4e-b15b-4746-a37f-4d1f3aa421b1.PNG">
 
