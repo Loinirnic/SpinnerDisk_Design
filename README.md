@@ -72,7 +72,7 @@ The Main PCB Board will consist of these components
 - 100uF Through hole decoupling capacitor
 
 The two level converters are used to change the voltage from 3.3Vto 5V
-I have specially designed the footprint for these as they consist of two 2.54mm 6 pin terminals adjacently positioned with a separation of around 9.97mm.
+I have specially designed the footprint for these as they consist of two **2.54mm** 6 pin terminals adjacently positioned with a separation of around **9.97mm**.
 You can see below the layout of the footprint:
 <img width="200" alt="footprint" src="https://user-images.githubusercontent.com/87417442/127123439-84998efd-94e4-4624-8b12-5f986bf3b9b3.PNG">
 
