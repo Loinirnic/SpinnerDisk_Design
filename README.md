@@ -9,7 +9,7 @@ The spinning disk experiment consists of a weighted disk attached to a DC motor 
 
 The first step in designing the electronics for the experiment is selecting a motor.
 
-###Our motor requirements:
+### Our motor requirements:
 - A deadband of <0.5V
 - A quick linear gain response after the deadband
 - Good repeatability for long life time
@@ -29,12 +29,10 @@ An ideal response can be shown from Quanser's motor, where its gain graph as sho
 
 One of the key points to keep in mind is the speed to torque ratio, if the torque is too low then the motor will take a long time to reach its maximum speed and its movements won't be as precise. A motor with a very high torque will usually be implemented with large weights - that we won't be dealing with. 
 
-The motor 
-## My Final motor choice
+## Capacitors and where to place them:
+The motor needs a decoupling capacitor of **100nF** to be soldered between the power terminals of its base. This decoupling capacitor reduces the noise and is the general value to be used for any motor. The will also be two **47nF** capacitors soldered from each terminal to the shell of the motor itself, acting to specifiy the frequency  range. Soldering the capacitors to the shell is the same as grounding.
 
-The motor we have chosen is the Maxon Coreless Motor; It has very similar characterisitcs to quanser's motor apart from a higher velocity of. Below we can see the gain graph after testing the motor without a weight compared to the quanser's response. 
-
-<img width="527" alt="maxonVquanser" src="https://user-images.githubusercontent.com/87417442/125797198-7a27112d-0e25-4391-be40-0b0f557556fd.PNG">
+When choosing a motor we must first test its velocity/ voltage responses. This consists of using a tachometer (measures velocity in RPM) and a power supply box running from 0-10V with 0.5V increments. Once the results have been obtained we must calculate the gain in rad/s and compare the results to how we wish them to appear in the graph above - Quanser's results.
 
 # Encoder PCB Design
 
