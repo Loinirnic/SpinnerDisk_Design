@@ -73,14 +73,23 @@ Overall the components we need to acheieve this functioning circuit are:
 - 5 Pin input terminal from encoder
 - 6 pin output terminal for motor driver
 - Two 3.3V-5V Bi-directional level converters from arduino
-- 2A Fuse for the arduino
+- 2A Fuse for the arduino THT/SMD 
 - 100uF Through hole decoupling capacitor (Preferrably ceramic)
 
-The two level converters are used to change the voltage from 3.3Vto 5V or vise versa. The consist of power terminals on each end for low or high voltages as well as 4 channels on each end for signals. 
+# Outline of components used and how they are connected
 
-I have specially designed the footprint for these as they consist of two **2.54mm** 6 pin terminals adjacently positioned with a separation of around **9.97mm**.
-You can see below the layout of the footprint:
+### Level converters:
+
+The two level converters are used to change the voltage from 3.3V to 5V or vise versa. These consist of power terminals and 4 channels for both the low and high voltage ends. Click [here](https://www.digchip.com/datasheets/download_datasheet.php?id=436483&part-number=BOB-12009&type=prod) to see the datasheet.
+
+I have specially designed the footprint for the pins on these boards to be directly connected to the pcb as the chips consist of two **2.54mm** 6 pin terminals adjacently positioned with a separation of around **9.97mm**.
+You can see below the layout of my footprint:
 <img width="200" alt="footprint" src="https://user-images.githubusercontent.com/87417442/127123439-84998efd-94e4-4624-8b12-5f986bf3b9b3.PNG">
 
 Where Pin 4 represents the GND pin on the Low Voltage side of the board.
-The Boards will be placed with the components facing the PCB since the tracks are much easier to layout when that is done.
+The Boards will be placed with the components facing the PCB since the tracks are much easier to layout on the pcb.
+Below is an image showing pins that are soldered to the chip on the correct side. These are male pins, female pins are then added to the main pcb where the converters can be attached. This design allows them to be easily removed if needed.
+![IMG_20210729_102810](https://user-images.githubusercontent.com/87417442/127521717-1f7ce065-070d-49bb-9166-079141cfd93a.jpg)
+
+
+### 
