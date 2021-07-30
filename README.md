@@ -67,7 +67,7 @@ The Main PCB Board will use an arduino nano to communicate to the motor, encoder
 
 Here is the final drawing schematic of the pcb 
 
-<img width="500" alt="Final_board_main_sch" src="https://user-images.githubusercontent.com/87417442/127626880-3306b380-69cb-4c17-b4e4-efec85432cec.PNG">
+<img width="550" alt="Final_board_main_sch" src="https://user-images.githubusercontent.com/87417442/127626880-3306b380-69cb-4c17-b4e4-efec85432cec.PNG">
 <img width="420" alt="Final_power_sch" src="https://user-images.githubusercontent.com/87417442/127640628-2acf87b6-adcf-4bbf-ba09-cbab76f0c98d.PNG">
 
 
