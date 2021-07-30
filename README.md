@@ -65,23 +65,21 @@ Above you can see the dimensions of the board. It is very small so that it can b
 
 The Main PCB Board will use an arduino nano to communicate to the motor, encoder and raspberry pi. The arduino will take the information from the raspberry pi and control the motor using a driver. It will then receive the feedback from the encoder readings and raturn those to the raspberry pi.
 
-Overall the components we need to achieve this functioning circuit are:
-
-- Arduino Nano - V3
-- DC power supply Barrel Jack 
-- Alternative Screw terminal for power supply
-- 5 Pin input terminal from encoder
-- 6 pin output terminal for motor driver
-- Two 3.3V-5V Bi-directional level converters from arduino
-- 2A Fuse for the arduino THT/SMD 
-- 100uF Through hole decoupling capacitor (Preferrably ceramic)
-
 Here is the final drawing schematic of the pcb 
 
-<img width="590" alt="Final_board_main_sch" src="https://user-images.githubusercontent.com/87417442/127623518-b51f1023-4008-4504-84a3-e6e53f64511a.PNG">
-<img width="636" alt="Final_power_sch" src="https://user-images.githubusercontent.com/87417442/127623536-c6dfc85e-9fbf-4247-918f-b1ca87b02588.PNG">
+<img width="590" alt="Final_board_main_sch" src="https://user-images.githubusercontent.com/87417442/127623518-b51f1023-4008-4504-84a3-e6e53f64511a.PNG"> <img width="590" alt="Final_power_sch" src="https://user-images.githubusercontent.com/87417442/127623536-c6dfc85e-9fbf-4247-918f-b1ca87b02588.PNG">
 
-Where I 
+Overall the components we need to achieve this circuit are:
+
+- Arduino Nano - V3 (A1)
+- DC power supply Barrel Jack (J6)
+- Motor terminal supply (J5)
+- Alternative Screw terminal for power supply (J7)
+- 5 Pin input terminal from encoder (J4)
+- 6 pin output terminal for motor driver (J3)
+- Two 3.3V-5V Bi-directional level converters from arduino (J1 & J2)
+- 2A Fuse for the arduino THT/SMD (F1)
+- 100uF Through hole decoupling capacitor (C1)
 
 ### Arduino Nano
 
