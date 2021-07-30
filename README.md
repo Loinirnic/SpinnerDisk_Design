@@ -60,20 +60,16 @@ The open source software used to design these boards is [KiCAD](https://www.kica
 <img width="420" alt="Encoder dimension" src="https://user-images.githubusercontent.com/87417442/125812643-c6282e4e-b15b-4746-a37f-4d1f3aa421b1.PNG">
 
 Above you can see the dimensions of the board. It is very small so that it can be neatly attached directly to the encoder board using terminal J1 without getting in the way of the experiment itself. I have chosen SMD Resistors as they don't take up as much room as Through-hole ones and can be easily applied using pasting or careful soldering.
-
+|
 # Main PID PCB Design
 
-The Main PCB Board will use an arduino nano to communicate to the motor, encoder and raspberry pi. The arduino will take the information from the raspberry pi and control the motor using a driver. It will then receive the feedback from the encoder readings and raturn those to the raspberry pi.
+The Main PCB Board will use an arduino nano to communicate to the motor, encoder and raspberry pi. The arduino will take the information from the raspberry pi and control the motor using a driver. It will then receive the feedback from the encoder readings and return those to the raspberry pi.
 
-Here is the final drawing schematic of the pcb 
+Here is the final drawing schematic of the pcb:
 
-<img width="550" alt="Final_board_main_sch" src="https://user-images.githubusercontent.com/87417442/127626880-3306b380-69cb-4c17-b4e4-efec85432cec.PNG">
-<img width="420" alt="Final_power_sch" src="https://user-images.githubusercontent.com/87417442/127640628-2acf87b6-adcf-4bbf-ba09-cbab76f0c98d.PNG">
+<img width="500" alt="Final_board_main_sch" src="https://user-images.githubusercontent.com/87417442/127641109-e4c337b1-1990-43c7-a3b3-f0abb163b42f.PNG">
 
-
-These are not two different schematics, just two separate sections of the baord.
-
-The components used in the schematic are:
+### The components used in the schematic are:
 
 - Arduino Nano - V3 (A1)
 - Two 3.3V-5V Bi-directional level converters from arduino (J1 & J2)
@@ -85,7 +81,17 @@ The components used in the schematic are:
 - 100uF Through hole decoupling capacitor (C1)
 - 8A Fuse for the arduino THT/SMD (F1)
 
-The arduino is connected directly to the level converters through the selected pins on the schematic. 
+The arduino is connected directly to the level converteers with the following PIN specification
+| Arduino Pin | Motor Diver pin | Encoder Pin |
+|-------------|-----------------|-------------|
+| 4 & 29 (GND) | 3 | 3 |
+| 5 | - | 6 |
+| 6 | - | 1 |
+| 7(DIR) | 2 | - |
+| 9 | 5 | - |
+| 10 | 1 | - |
+| 14 (INDEX) | - | 5 |
+| 17 (Vcc) | 4 | 4 |
 
 ### Arduino Nano
 
