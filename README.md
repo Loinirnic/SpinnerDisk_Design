@@ -16,7 +16,7 @@ The first step in designing the electronics for the experiment is selecting a mo
 
 An ideal response can be shown from Quanser's motor, where its gain graph as shown below, demonstrates what we are looking for:
 
-<img width="527" alt="QuanserGain_graph" src="https://user-images.githubusercontent.com/87417442/125777520-b5089581-b4e3-4b79-ad56-eedee1e55f10.PNG">
+<img width="420" alt="QuanserGain_graph" src="https://user-images.githubusercontent.com/87417442/125777520-b5089581-b4e3-4b79-ad56-eedee1e55f10.PNG">
 
 ## Characteristics to look for when ordering a motor:
 
@@ -49,7 +49,7 @@ The Encoder must be connected to the main board to transfer the data it collects
 The open source software used to design these boards is [KiCAD](https://www.kicad.org/)
 
 ### Encoder Final Circuit Schematic drawing
-<img width="416" alt="Encoder final schematic" src="https://user-images.githubusercontent.com/87417442/125802305-4f761adf-d002-4eea-b290-1487a04a4102.PNG">
+<img width="420" alt="Encoder final schematic" src="https://user-images.githubusercontent.com/87417442/125802305-4f761adf-d002-4eea-b290-1487a04a4102.PNG">
 
 ### Footprints used in design:
 - Resistors R1, R2, R3 -> **Resistor_SMD:R_1206_3216Metric**
@@ -57,7 +57,7 @@ The open source software used to design these boards is [KiCAD](https://www.kica
 - Output terminal J2 -> **Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical**
 
 ### My Encoder PCB final Design 
-<img width="416" alt="Encoder dimension" src="https://user-images.githubusercontent.com/87417442/125812643-c6282e4e-b15b-4746-a37f-4d1f3aa421b1.PNG">
+<img width="420" alt="Encoder dimension" src="https://user-images.githubusercontent.com/87417442/125812643-c6282e4e-b15b-4746-a37f-4d1f3aa421b1.PNG">
 
 Above you can see the dimensions of the board. It is very small so that it can be neatly attached directly to the encoder board using terminal J1 without getting in the way of the experiment itself. I have chosen SMD Resistors as they don't take up as much room as Through-hole ones and can be easily applied using pasting or careful soldering.
 
@@ -67,23 +67,30 @@ The Main PCB Board will use an arduino nano to communicate to the motor, encoder
 
 Here is the final drawing schematic of the pcb 
 
-<img width="590" alt="Final_board_main_sch" src="https://user-images.githubusercontent.com/87417442/127623518-b51f1023-4008-4504-84a3-e6e53f64511a.PNG"> <img width="590" alt="Final_power_sch" src="https://user-images.githubusercontent.com/87417442/127623536-c6dfc85e-9fbf-4247-918f-b1ca87b02588.PNG">
+<img width="420" alt="Final_board_main_sch" src="https://user-images.githubusercontent.com/87417442/127626880-3306b380-69cb-4c17-b4e4-efec85432cec.PNG">
+<img width="420" alt="Final_power_sch" src="https://user-images.githubusercontent.com/87417442/127640628-2acf87b6-adcf-4bbf-ba09-cbab76f0c98d.PNG">
 
-Overall the components we need to achieve this circuit are:
+
+These are not two different schematics, just two separate sections of the baord.
+
+The components used in the schematic are:
 
 - Arduino Nano - V3 (A1)
-- DC power supply Barrel Jack (J6)
-- Motor terminal supply (J5)
-- Alternative Screw terminal for power supply (J7)
-- 5 Pin input terminal from encoder (J4)
-- 6 pin output terminal for motor driver (J3)
 - Two 3.3V-5V Bi-directional level converters from arduino (J1 & J2)
-- 2A Fuse for the arduino THT/SMD (F1)
+- 6 pin output terminal for motor driver (J3)
+- 5 Pin input terminal from encoder (J4)
+- Motor terminal supply (J5)
+- DC power supply Barrel Jack (J6)
+- Alternative Screw terminal for power supply (J7)
 - 100uF Through hole decoupling capacitor (C1)
+- 8A Fuse for the arduino THT/SMD (F1)
+
+The arduino is connected directly to the level converters through the selected pins on the schematic. 
 
 ### Arduino Nano
 
 To attach the arduino nano to the pcb we will need two 15 pin terminals. The Female pin terminals will be soldered onto the pcb whereas the male pins will be soldered onto the arduino where they can be attached together easily. **Make sure when designing pcb to position the footprint in an area where the usb port has clear access**.
+
 
 ### Level converters:
 
