@@ -95,14 +95,12 @@ The arduino is connected directly to the level converteers with the following PI
 
 #### Details to notice in the schematic:
 
-- The pins from the motor driver terminals have labels on them indicating which specific pins on the actual driver to hook up to.
+- The pins from the motor driver terminals have been labelled so to follow when wiring up to the pins on the driver board
 - There are 6 pins on the motor driver terminal where two are connected to the same pin on the converter
-- The positions of the polarised capacitor by the power terminal
+- The position of the polarised capacitor relative power terminal
 
-### Arduino Nano
-
-To attach the arduino nano to the pcb we will need two 15 pin terminals. The Female pin terminals will be soldered onto the pcb whereas the male pins will be soldered onto the arduino where they can be attached together easily. **Make sure when designing pcb to position the footprint in an area where the usb port has clear access**.
-
+## Footprints used for each component
+For all of the components apart from the level converters, the footprints are available on the library. The footprint I made for the converter can be found in the attachments. 
 
 ### Level converters:
 
