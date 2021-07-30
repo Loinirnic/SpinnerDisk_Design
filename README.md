@@ -65,7 +65,7 @@ Above you can see the dimensions of the board. It is very small so that it can b
 
 The Main PCB Board will use an arduino nano to communicate to the motor, encoder and raspberry pi. The arduino will take the information from the raspberry pi and control the motor using a driver. It will then receive the feedback from the encoder readings and raturn those to the raspberry pi.
 
-Overall the components we need to acheieve this functioning circuit are:
+Overall the components we need to achieve this functioning circuit are:
 
 - Arduino Nano - V3
 - DC power supply Barrel Jack 
@@ -76,14 +76,16 @@ Overall the components we need to acheieve this functioning circuit are:
 - 2A Fuse for the arduino THT/SMD 
 - 100uF Through hole decoupling capacitor (Preferrably ceramic)
 
-# Outline of components used and how they are connected
+Here is the final drawing schematic of the pcb 
+
+<img width="590" alt="Final_board_main_sch" src="https://user-images.githubusercontent.com/87417442/127623518-b51f1023-4008-4504-84a3-e6e53f64511a.PNG">
+<img width="636" alt="Final_power_sch" src="https://user-images.githubusercontent.com/87417442/127623536-c6dfc85e-9fbf-4247-918f-b1ca87b02588.PNG">
+
+Where I 
 
 ### Arduino Nano
 
-To attach the arduino nano to the pcb we will need two 15 pin terminals. The Female pin terminal will be soldered onto the pcb whereas the male pins will be soldered onto the arduino where it can be attached or removed easily. **Make sure when designing pcb to position the footprint in an area where the usb port has clear access**.
-
-### Terminals and Barrel Jack
-When designing I must make sure to keep the inputs of the terminals clear
+To attach the arduino nano to the pcb we will need two 15 pin terminals. The Female pin terminals will be soldered onto the pcb whereas the male pins will be soldered onto the arduino where they can be attached together easily. **Make sure when designing pcb to position the footprint in an area where the usb port has clear access**.
 
 ### Level converters:
 
