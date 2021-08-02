@@ -110,19 +110,28 @@ For all of the components apart from the level converters, the footprints are av
 
 ## Footprints
 
-1. Arduino nano - Module:Arduino_Nano
+1. Arduino nano - Module:Arduino_Nano 
 2. Motor Driver Pin terminal(J3) - Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical
 3. Encoder Pin terminal(J4) - Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical
 4. Motor power terminal(J5) and Alternative Vss(J7) - TerminalBlock:TerminalBlock_bornier-2_P5.08mm
 5. 8A SMD Fuse - Fuse:Fuse_1206_3216Metric
 6. Polarised 100uF Capacitor - Capacitor_THT:CP_Radial_D6.3mm_P2.50mm
 7. Barrel Jack - Connector_BarrelJack:BarrelJack_Horizontal
-8. Level Converters(J1, J2) - I have specially designed the footprint for the pins on these boards to be directly connected to the pcb as the chips consist of two **2.54mm** 6 pin terminals adjacently positioned with a separation of around **9.97mm**.
+8. Level Converters(J1, J2) - I have specially designed the footprint for the pins on these boards to be directly connected to the pcb as the chips consist of two **2.54mm** 6 pin terminals adjacently positioned with a separation of around **9.97mm**. The .mod file available for this footprint is available in the attachments folder of this repo.
+
 You can see below the layout of my footprint:
 
 <img width="156" alt="footprint" src="https://user-images.githubusercontent.com/87417442/127123439-84998efd-94e4-4624-8b12-5f986bf3b9b3.PNG">
 
-The .mod file available for this footprint is available in the 
 Where Pin 4 represents the GND pin on the Low Voltage side of the board.
 The Boards will be placed with the components facing the PCB since the tracks are much easier to layout on the pcb. The pins soldered onto the chips are male, female pins are then soldered to the main pcb so that the chips can be easily attached or removed.
 
+## Final PCB design layout
+
+<img width="420" alt="Dimensions of board base" src="https://user-images.githubusercontent.com/87417442/127857721-643cf321-efda-4e60-91d7-68a30bad9466.PNG">
+
+Above is the layout I followed myself in the final design. There are holes on the board for possible mounting or attaching to an insulating layer of acrylic to eliminate the chances of shorts occuring.
+
+# The final PCB
+
+![Converter](https://user-images.githubusercontent.com/87417442/127858300-99511ed0-f33c-4658-a370-c02469569573.jpg)
