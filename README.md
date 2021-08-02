@@ -101,8 +101,8 @@ The arduino is connected directly to the level converters with the following pin
 
 
 Some other details to notice are:
-...The pins from the motor driver terminals have been labelled in correspondence to the pins on the actual motor driver for connections between the two boards. There are 2 pins on the motor driver pin terminal that are connected to the same pin on the voltage converter.
 
+...The pins from the motor driver terminals have been labelled in correspondence to the pins on the actual motor driver for connections between the two boards. There are 2 pins on the motor driver pin terminal that are connected to the same pin on the voltage converter.
 
 ### The next step is to create the layout of the final board, to do this we need the footprints of the components
 
@@ -122,6 +122,7 @@ You can see below the layout of my footprint:
 
 <img width="156" alt="footprint" src="https://user-images.githubusercontent.com/87417442/127123439-84998efd-94e4-4624-8b12-5f986bf3b9b3.PNG">
 
+The .mod file available for this footprint is available in the 
 Where Pin 4 represents the GND pin on the Low Voltage side of the board.
 The Boards will be placed with the components facing the PCB since the tracks are much easier to layout on the pcb. The pins soldered onto the chips are male, female pins are then soldered to the main pcb so that the chips can be easily attached or removed.
 
