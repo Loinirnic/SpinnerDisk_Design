@@ -61,28 +61,29 @@ The open source software used to design these boards is [KiCAD](https://www.kica
 
 Above you can see the dimensions of the board. It is very small so that it can be neatly attached directly to the encoder board using terminal J1 without getting in the way of the experiment itself. I have chosen SMD Resistors as they don't take up as much room as Through-hole ones and can be easily applied using pasting or careful soldering.
 |
-# Main PID PCB Design
-
-
-
-Here is the final drawing schematic of the pcb:
-
-<img width="500" alt="Final_board_main_sch" src="https://user-images.githubusercontent.com/87417442/127645443-46c0f1e9-f01e-453d-9938-83d1dc093d54.PNG">
-
-### The components used in the schematic and purpose in final design
+# Main PID PCB Design 
+When designing the board we must include all of the following parts in order to interact with the motor and encoder board:
 
 - Arduino Nano - V3 (A1) - used to communicate to the motor, encoder and raspberry pi. The arduino will take the information from the raspberry pi and control the motor using a driver. It will then receive the feedback from the encoder readings and return those to the raspberry pi.
 
-- Two 3.3V-5V ***Bi-directional level converters from arduino*** (J1 & J2) - change the voltage from 3.3V to 5V or vise versa. These consist of power terminals and 4 channels for both the low and high voltage ends. Click [here](https://www.digchip.com/datasheets/download_datasheet.php?id=436483&part-number=BOB-12009&type=prod) to see the datasheet. One will be used for the encoder input and one for the motor driver output from the arduino nano since it only needs 3.3V to work.
+- Two 3.3V-5V ***Bi-directional level converters from arduino*** (J1 & J2) - change the voltage from 3.3V to 5V or vise versa. These consist of power terminals and 4 channels for both the low and high voltage ends of a 02*06 connector. Click [here](https://www.digchip.com/datasheets/download_datasheet.php?id=436483&part-number=BOB-12009&type=prod) to see the datasheet. One will be used for the encoder input and one for the motor driver output from the arduino nano since it only needs 3.3V to work. 
 
+- 6 pin output terminal for motor driver (J3) - Male pin terminal from pcb to motor driver. Connected to the high voltage side of a level converter before attaching to the arduino nano.
 
-- 6 pin output terminal for motor driver (J3) - connection point to the motor driver. Each pin is labelled to aid correct connections between pcb and driver board.
-- 5 Pin input terminal from encoder (J4) - Connection point to the encoder board
-- Motor terminal supply (J5) - supply for DC motor
+- 5 Pin input terminal from encoder (J4) - Male pin terminal from pcb to encoder board. Connected to the high voltage of a levek converterbefore attaching to arduino nano
+
+- Motor terminal supply (J5) - Screw terminal Supply for DC motor
+
 - DC power supply Barrel Jack (J6) - power supply port
-- Alternative Screw terminal for power supply (J7) - connect pcb directly to a DC power supply by screwing in cables.
-- 100uF Through hole decoupling capacitor (C1) - to reduce noise from power supply cables
-- 8A Fuse for the arduino THT/SMD (F1) - ensure that the current does not exceed 8A and is easy to replace
+- Alternative Screw terminal for power supply (J7) - Connect pcb directly to a DC power supply by screwing in cables instead of the barrel jack/audio jack 
+
+- 100uF Through hole decoupling capacitor (C1) - Used reduce noise from power supply. must be placed as close to terminal as possible. preferrably made from ceramic then foil.
+
+- 8A Fuse for the arduino THT/SMD (F1) - Ensures that the current does not exceed 8A and is easy to replace if it blows
+
+## Final drawing schematic of the pcb
+
+<img width="500" alt="Final_board_main_sch" src="https://user-images.githubusercontent.com/87417442/127645443-46c0f1e9-f01e-453d-9938-83d1dc093d54.PNG">
 
 The arduino is connected directly to the level converters with the following pin specification
 
