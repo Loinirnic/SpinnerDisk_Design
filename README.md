@@ -132,7 +132,7 @@ The Boards will be placed with the components facing the PCB since the tracks ar
 
 Above is the layout I followed myself in the final design. There are holes on the board for possible mounting or attaching to an insulating layer of acrylic to eliminate the chances of shorts occuring.
 
-# The final PCB
+# What the final PCB shoul look like
 
 <img width="420" alt="Main_PCB" src="https://user-images.githubusercontent.com/87417442/127858483-793a2feb-620c-41f5-82b7-d1441a5a99b0.PNG">
 
