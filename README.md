@@ -64,7 +64,7 @@ Above you can see the dimensions of the board. It is very small so that it can b
 # Main PID PCB Design 
 When designing the board we must include all of the following parts in order to interact with the motor and encoder board:
 
-- Arduino Nano - V3 (A1) - used to communicate to the motor, encoder and raspberry pi. The arduino will take the information from the raspberry pi and control the motor using a driver. It will then receive the feedback from the encoder readings and return those to the raspberry pi.
+- 'Arduino Nano' - V3 (A1) - used to communicate to the motor, encoder and raspberry pi. The arduino will take the information from the raspberry pi and control the motor using a driver. It will then receive the feedback from the encoder readings and return those to the raspberry pi.
 
 - Two 3.3V-5V ***Bi-directional level converters from arduino*** (J1 & J2) - change the voltage from 3.3V to 5V or vise versa. These consist of power terminals and 4 channels for both the low and high voltage ends of a 02*06 connector. Click [here](https://www.digchip.com/datasheets/download_datasheet.php?id=436483&part-number=BOB-12009&type=prod) to see the datasheet. One will be used for the encoder input and one for the motor driver output from the arduino nano since it only needs 3.3V to work. 
 
@@ -77,9 +77,9 @@ When designing the board we must include all of the following parts in order to 
 - DC power supply Barrel Jack (J6) - power supply port
 - Alternative Screw terminal for power supply (J7) - Connect pcb directly to a DC power supply by screwing in cables instead of the barrel jack/audio jack 
 
-- 100uF Through hole decoupling capacitor (C1) - Used reduce noise from power supply. must be placed as close to terminal as possible. preferrably made from ceramic then foil.
+- 100uF Through hole decoupling capacitor (C1) - Used reduce noise from power supply. must be placed as close to terminal as possible, preferrably made from ceramic or tentalum. Here is a link for further reading on decoupling capacitors in your own circuits - [When and how to use a Decoupling capacitor](https://blog.upverter.com/2019/11/12/when-and-how-to-use-a-decoupling-capacitor-in-your-pcb/)
 
-- 8A Fuse for the arduino THT/SMD (F1) - Ensures that the current does not exceed 8A and is easy to replace if it blows
+- 8A Fuse for the arduino THT/SMD (F1) - Ensures that the current does not exceed 8A since that is the supply current available. The value of fuse will depend on supply value and component maximum current.
 
 ## Final drawing schematic of the pcb
 
