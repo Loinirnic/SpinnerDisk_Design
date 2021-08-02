@@ -1,3 +1,4 @@
+<img width="379" alt="Main_PCB" src="https://user-images.githubusercontent.com/87417442/127858463-f012da3a-0046-4530-8ad3-7bf4ee5802ac.PNG">
 # Spinning disk design guide
 The following guide covers the design of the spinning disk remote lab's Printed Circuit Board during my internship.
 
@@ -134,4 +135,5 @@ Above is the layout I followed myself in the final design. There are holes on th
 
 # The final PCB
 
-![Converter](https://user-images.githubusercontent.com/87417442/127858300-99511ed0-f33c-4658-a370-c02469569573.jpg)
+<img width="420" alt="Main_PCB" src="https://user-images.githubusercontent.com/87417442/127858483-793a2feb-620c-41f5-82b7-d1441a5a99b0.PNG">
+
