@@ -1,5 +1,5 @@
-# Spinning disk design 
-Design outline for pcb and motor choices made for the spinning disk experiment 
+# Spinning disk design guide
+The following guide covers the design of the spinning disk remote lab's Printed Circuit Board during my internship.
 
 ## Experiment brief
 
@@ -63,23 +63,26 @@ Above you can see the dimensions of the board. It is very small so that it can b
 |
 # Main PID PCB Design
 
-The Main PCB Board will use an arduino nano to communicate to the motor, encoder and raspberry pi. The arduino will take the information from the raspberry pi and control the motor using a driver. It will then receive the feedback from the encoder readings and return those to the raspberry pi.
+
 
 Here is the final drawing schematic of the pcb:
 
 <img width="500" alt="Final_board_main_sch" src="https://user-images.githubusercontent.com/87417442/127645443-46c0f1e9-f01e-453d-9938-83d1dc093d54.PNG">
 
-### The components used in the schematic are:
+### The components used in the schematic and purpose in final design
 
-- Arduino Nano - V3 (A1)
-- Two 3.3V-5V Bi-directional level converters from arduino (J1 & J2)
-- 6 pin output terminal for motor driver (J3)
-- 5 Pin input terminal from encoder (J4)
-- Motor terminal supply (J5)
-- DC power supply Barrel Jack (J6)
-- Alternative Screw terminal for power supply (J7)
-- 100uF Through hole decoupling capacitor (C1)
-- 8A Fuse for the arduino THT/SMD (F1)
+- Arduino Nano - V3 (A1) - used to communicate to the motor, encoder and raspberry pi. The arduino will take the information from the raspberry pi and control the motor using a driver. It will then receive the feedback from the encoder readings and return those to the raspberry pi.
+
+- Two 3.3V-5V ***Bi-directional level converters from arduino*** (J1 & J2) - change the voltage from 3.3V to 5V or vise versa. These consist of power terminals and 4 channels for both the low and high voltage ends. Click [here](https://www.digchip.com/datasheets/download_datasheet.php?id=436483&part-number=BOB-12009&type=prod) to see the datasheet. One will be used for the encoder input and one for the motor driver output from the arduino nano since it only needs 3.3V to work.
+
+
+- 6 pin output terminal for motor driver (J3) - connection point to the motor driver. Each pin is labelled to aid correct connections between pcb and driver board.
+- 5 Pin input terminal from encoder (J4) - Connection point to the encoder board
+- Motor terminal supply (J5) - supply for DC motor
+- DC power supply Barrel Jack (J6) - power supply port
+- Alternative Screw terminal for power supply (J7) - connect pcb directly to a DC power supply by screwing in cables.
+- 100uF Through hole decoupling capacitor (C1) - to reduce noise from power supply cables
+- 8A Fuse for the arduino THT/SMD (F1) - ensure that the current does not exceed 8A and is easy to replace
 
 The arduino is connected directly to the level converters with the following pin specification
 
@@ -106,13 +109,14 @@ For all of the components apart from the level converters, the footprints are av
 ## Purpose of components
 ### Level converters:
 
-The two level converters are used to change the voltage from 3.3V to 5V or vise versa. These consist of power terminals and 4 channels for both the low and high voltage ends. Click [here](https://www.digchip.com/datasheets/download_datasheet.php?id=436483&part-number=BOB-12009&type=prod) to see the datasheet. One will be used for the encoder input and one for the motor driver output from the arduino nano since it only needs 3.3V to work.
 
 ### Barrel Jack/ Alternative power screw terminal
 These components are used to supply voltage throughout the pcb through either a plug in audio cable or directly from a DC power supply using wires.These two components are placed in parallel to eachother to allow the choice for testing or everyday use etc.
 
 ### 100uF Decoupling Capacitor
-This capacitor is used to reduce the noise going into
+This capacitor is used to reduce the noise from the power supply cables going into the pcb. Typically it is suggested to place the capacitor as close to the terminal as possible and preffereably be made from ceramic, however foil ones also work (what I have chosen). This is good to keep in mind when designing the final board and selecting the footprints.
+
+
 
 I have specially designed the footprint for the pins on these boards to be directly connected to the pcb as the chips consist of two **2.54mm** 6 pin terminals adjacently positioned with a separation of around **9.97mm**.
 You can see below the layout of my footprint:
