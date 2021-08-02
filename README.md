@@ -1,11 +1,11 @@
 # Spinning disk design guide
 The following guide covers the design of the spinning disk remote lab's Printed Circuit Board during my internship.
 
-## Experiment brief
+### Experiment brief
 
 The spinning disk experiment consists of a weighted disk attached to a DC motor where a voltage is applied causing the disk to move. An encoder is used to read the velocity output and provide the results to the user via an arduino and raspberry pi. A main PCB will be used to control where the inputs and outputs of the experiement go, and how they work together.
 
-# Choosing a motor
+## Choosing a motor
 
 The first step in designing the electronics for the experiment is selecting a motor.
 
@@ -18,30 +18,37 @@ An ideal response can be shown from Quanser's motor, where its gain graph as sho
 
 <img width="420" alt="QuanserGain_graph" src="https://user-images.githubusercontent.com/87417442/125777520-b5089581-b4e3-4b79-ad56-eedee1e55f10.PNG">
 
-## Characteristics to look for when ordering a motor:
+### Characteristics to look for when ordering a motor:
 
 |Motor Parameters| Quanser motor values for reference|
 |----------------|-----------------------------------|
 | Voltage 12V-24V | 18V |
 | Low Inertia | 4.0 × 10−6 kg-m^2 |
 | Nominal speed | 3050 RPM |
-| Nominal torque | 22 mNm |
+| Nominal torque | 22-30 mNm |
 
-One of the key points to keep in mind is the speed to torque ratio, if the torque is too low then the motor will take a long time to reach its maximum speed and its movements won't be as precise. A motor with a very high torque will usually be implemented with large weights - that we won't be dealing with. 
+One of the key points to keep in mind is the speed to torque ratio, if the torque is too low then the motor will take a long time to reach its maximum speed and its movements won't be as precise. A motor with a very high torque will usually be implemented with larger weights which this lab doesnt work with.
 
 ## Capacitors and where to place them:
-The motor needs a decoupling capacitor of **100nF** to be soldered between the power terminals of its base. This decoupling capacitor reduces the noise and is the general value to be used for any motor. The will also be two **47nF** capacitors soldered from each terminal to the shell of the motor itself, acting to specifiy the frequency  range. Soldering the capacitors to the shell is the same as grounding.
+The motor needs a decoupling capacitor of **100nF** to be soldered between the power terminals of its base. This decoupling capacitor reduces the noise and is the general value to be used for any motor. There will also be two **47nF** capacitors soldered from each terminal to the shell of the motor itself, acting to specifiy the frequency range at the base of the motor. Soldering the capacitors to the shell is the same as grounding. The circuit diagram to follow for the capacitors is as follows:
 
-## Testing the motor
-When choosing a motor we must first test its velocity/ voltage responses. This consists of using a tachometer (measures velocity in RPM) and a power supply box running from 0-10V with 0.5V increments. Once the results have been obtained we must calculate the gain in rad/s and compare the results to how we wish them to appear in the graph above - Quanser's results. 
+<img width="300" alt="Decoupling Capacitors" src="https://user-images.githubusercontent.com/87417442/127871075-a76b87f7-c240-4cae-b446-e198f5b8dc79.PNG">
 
-# Encoder PCB Design
+### Testing the motor
+
+When choosing a motor we must first test its velocity/ voltage responses. This consists of using a tachometer (measures velocity in RPM) and a DC power supply box running from 0-10V with 0.5V increments. Once theresults have been obtained we must calculate the gain in rad/s and compare the results to how we wish them to appear in the graph above - Quanser's results. This can be completed using excel spreadsheets.
+When testing the motors myself I created a stand and a test weight to keep it balanced and steady as demonstrated below.
+
+![IMG_20210701_125306](https://user-images.githubusercontent.com/87417442/127871788-8104bc9a-cd7a-4b56-8285-4761222f5da0.jpg)
+
+## Encoder PCB Design
 
 The Optical encoder we are using is - AEDB-9140 Series.
 
-The Encoder must be connected to the main board to transfer the data it collects through incremental channels, we might assume that this can be acheived attaching wires directly from the encoder pins to the main pcb however, as per the datasheet we must include pull up resistors for the different channels which have to be positioned as close to the encoder as possible. To achieve this a separate encpder bpard must be dsigned with the Resistors on it.
+The Encoder must be connected to the main board to transfer the data it collects through incremental channels, we might assume that this can be acheived by attaching wires directly from the encoder pins to the main pcb however, as per the datasheet we must include pull up resistors for the different channels which must be positioned as close to the encoder as possible. To achieve this - a separate encoder board must be dsigned with the Resistors included.
 
-## Requirements for the Encoder Board:
+### Requirements for the Encoder Board:
+
 - Five input connecting terminals for the encoders pins
 - Three **2k7ohm** pull up resistors for the signals - as required from the [datasheet](http://www.farnell.com/datasheets/20523.pdf)
 - Five Output connecting terminals for the wires to go to the main PCB 
@@ -49,12 +56,15 @@ The Encoder must be connected to the main board to transfer the data it collects
 The open source software used to design these boards is [KiCAD](https://www.kicad.org/)
 
 ### Encoder Final Circuit Schematic drawing
+
 <img width="420" alt="Encoder final schematic" src="https://user-images.githubusercontent.com/87417442/125802305-4f761adf-d002-4eea-b290-1487a04a4102.PNG">
 
 ### Footprints used in design:
 - Resistors R1, R2, R3 -> **Resistor_SMD:R_1206_3216Metric**
 - Encoder board terminal J1 -> **Connector_PinHeader_2.00mm:PinHeader_1x05_P2.00mm_Vertical**
 - Output terminal J2 -> **Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical**
+
+These footprints can be accessed from any library
 
 ### My Encoder PCB final Design 
 <img width="420" alt="Encoder dimension" src="https://user-images.githubusercontent.com/87417442/125812643-c6282e4e-b15b-4746-a37f-4d1f3aa421b1.PNG">
@@ -132,7 +142,7 @@ The Boards will be placed with the components facing the PCB since the tracks ar
 
 Above is the layout I followed myself in the final design. There are holes on the board for possible mounting or attaching to an insulating layer of acrylic to eliminate the chances of shorts occuring.
 
-# What the final PCB shoul look like
+# What the final PCB should look like
 
 <img width="420" alt="Main_PCB" src="https://user-images.githubusercontent.com/87417442/127858483-793a2feb-620c-41f5-82b7-d1441a5a99b0.PNG">
 
