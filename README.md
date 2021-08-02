@@ -81,7 +81,8 @@ Here is the final drawing schematic of the pcb:
 - 100uF Through hole decoupling capacitor (C1)
 - 8A Fuse for the arduino THT/SMD (F1)
 
-The arduino is connected directly to the level converteers with the following PIN specification
+The arduino is connected directly to the level converters with the following pin specification
+
 | Arduino Pin | Motor Diver pin | Encoder Pin |
 |-------------|-----------------|-------------|
 | 4 & 29 (GND) | 3 | 3 |
@@ -95,17 +96,23 @@ The arduino is connected directly to the level converteers with the following PI
 
 #### Details to notice in the schematic:
 
-- The pins from the motor driver terminals have been labelled so to follow when wiring up to the pins on the driver board
-- There are 6 pins on the motor driver terminal where two are connected to the same pin on the converter
+- The pins from the motor driver terminals have been labelled in correspondence to the pins on the actual motor driver for connections between the two boards
+- There are 2 pins on the motor driver pin terminal that are connected to the same pin on the voltage converter
 - The position of the polarised capacitor relative power terminal
 
 ## Footprints used for each component
 For all of the components apart from the level converters, the footprints are available on the library. The footprint I made for the converter can be found in the attachments. 
 
+## Purpose of components
 ### Level converters:
 
-The two level converters are used to change the voltage from 3.3V to 5V or vise versa. These consist of power terminals and 4 channels for both the low and high voltage ends. Click [here](https://www.digchip.com/datasheets/download_datasheet.php?id=436483&part-number=BOB-12009&type=prod) to see the datasheet.
-One will be used for the encoder input and one for the motor driver output. 
+The two level converters are used to change the voltage from 3.3V to 5V or vise versa. These consist of power terminals and 4 channels for both the low and high voltage ends. Click [here](https://www.digchip.com/datasheets/download_datasheet.php?id=436483&part-number=BOB-12009&type=prod) to see the datasheet. One will be used for the encoder input and one for the motor driver output from the arduino nano since it only needs 3.3V to work.
+
+### Barrel Jack/ Alternative power screw terminal
+These components are used to supply voltage throughout the pcb through either a plug in audio cable or directly from a DC power supply using wires.These two components are placed in parallel to eachother to allow the choice for testing or everyday use etc.
+
+### 100uF Decoupling Capacitor
+This capacitor is used to reduce the noise going into
 
 I have specially designed the footprint for the pins on these boards to be directly connected to the pcb as the chips consist of two **2.54mm** 6 pin terminals adjacently positioned with a separation of around **9.97mm**.
 You can see below the layout of my footprint:
